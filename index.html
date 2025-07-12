@@ -15,10 +15,13 @@
             color: #333;
         }
         header {
-            background-color: #009fe3;
+            background: linear-gradient(135deg, #007bb8, #00c3e3);
             color: #fff;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
         }
         header .profile {
             display: flex;
@@ -28,39 +31,49 @@
         }
         header .profile img {
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         header .profile-name {
-            font-size: 1.6em;
+            font-size: 1.8em;
             font-weight: bold;
+            margin-bottom: 10px;
         }
         header p.tagline {
-            margin-top: 10px;
-            font-size: 1.4em;
+            font-size: 1.5em;
             font-weight: 500;
+            margin: 10px 0 20px;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
         header .social-follow {
-            margin-top: 15px;
             display: flex;
             gap: 15px;
             justify-content: center;
+            flex-wrap: wrap;
         }
         header .social-follow a {
             background-color: #fff;
-            color: #009fe3;
-            padding: 10px 20px;
-            border-radius: 20px;
+            color: #007bb8;
+            padding: 10px 25px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
         }
         header .social-follow a:hover {
             background-color: #007bb8;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        header .cta-follow {
+            margin-top: 15px;
+            font-size: 1em;
+            font-style: italic;
         }
         .highlight-card {
             display: flex;
@@ -75,22 +88,21 @@
             width: 100%;
             max-width: 500px;
             object-fit: cover;
-            object-position: 80% center;
+            object-position: 85% center;
         }
         .highlight-content {
             flex: 1;
             padding: 20px;
         }
-        .highlight-content h2 {
-            margin-top: 0;
-            color: #009fe3;
-        }
         .highlight-content p {
             margin: 15px 0;
             font-size: 1.1em;
         }
+        .highlight-content p strong {
+            color: #007bb8;
+        }
         .highlight-content .button-link,
-        .button-link {
+        .list-button {
             background-color: #009fe3;
             color: #fff;
             padding: 12px 24px;
@@ -103,7 +115,7 @@
             text-align: center;
         }
         .highlight-content .button-link:hover,
-        .button-link:hover {
+        .list-button:hover {
             background-color: #007bb8;
         }
         .section-title {
@@ -132,11 +144,25 @@
             color: #007bb8;
         }
         @media (max-width: 768px) {
-            .highlight-card {
-                flex-direction: column;
+            header {
+                padding: 30px 15px;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+            header .profile img {
+                width: 90px;
+                height: 90px;
+            }
+            header .profile-name {
+                font-size: 1.5em;
+            }
+            header p.tagline {
+                font-size: 1.3em;
+            }
+            header .social-follow a {
+                padding: 8px 20px;
             }
             .highlight-card img {
-                max-width: 100%;
                 object-position: center center;
             }
         }
@@ -149,6 +175,7 @@
         <img src="https://media.licdn.com/dms/image/v2/C4D03AQH1JqCFdgm-iA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1647522938820?e=1757548800&v=beta&t=HzWahgkNB6hggFhHwEU-eNQuGff2kXUf2pzf7RmPTKY" alt="Silviane Curi">
         <div class="profile-name">Silviane Curi</div>
         <p class="tagline">Alcance a inovação que seu negócio precisa</p>
+        <p class="cta-follow">Me siga nas redes para mais insights e dicas</p>
         <div class="social-follow">
             <a href="https://www.linkedin.com/in/silvianecuri/" target="_blank">LinkedIn</a>
             <a href="https://www.instagram.com/silvianecuri/" target="_blank">Instagram</a>
@@ -159,68 +186,67 @@
 <div class="highlight-card">
     <img src="https://sebraepr.com.br/wp-content/uploads/2024/04/banner-guia-de-inovacao-1.jpg" alt="Guia de Inovação Sebrae">
     <div class="highlight-content">
-        <h2>Inove com o Sebrae</h2>
-        <p>Ferramentas práticas e acessíveis para organizar e tirar suas ideias do papel. O Guia de Inovação Sebrae PR ajuda empreendedores a transformar projetos em realidade com estratégia e inovação.</p>
+        <p><strong>Ferramentas práticas e acessíveis</strong> para organizar e tirar suas ideias do papel. <strong>O Guia de Inovação Sebrae PR</strong> é o aliado certo para empreendedores que desejam transformar projetos em negócios de sucesso com <strong>estratégia</strong> e <strong>inovação</strong>.</p>
         <a class="button-link" href="https://sebraepr.com.br/guiadeinovacao/" target="_blank">Quero Inovar com o Sebrae</a>
     </div>
 </div>
 
-<div class="section-title">Ferramentas Selecionadas para Você</div>
+<div class="section-title">👇 Mais ferramentas selecionadas para você! </div>
 
 <section>
     <h2>1. Semrush – Pesquisa de palavras-chave e análise de SEO</h2>
     <p><strong>Descrição:</strong> Uma plataforma avançada para monitoramento de concorrência e tendências de busca. Com ela, o empreendedor consegue identificar quais termos e temas estão em alta, descobrir lacunas no mercado e planejar conteúdos estratégicos que atraem mais visitantes para o site.</p>
     <p><strong>Dica prática:</strong> Pesquise palavras-chave relacionadas ao seu negócio e use-as nos textos do seu site e redes sociais para melhorar o ranqueamento no Google.</p>
-    <a class="button-link" href="https://pt.semrush.com/" target="_blank">Visitar Semrush</a>
+    <a class="list-button" href="https://pt.semrush.com/" target="_blank">Visitar Semrush</a>
 </section>
 
 <section>
     <h2>2. Gerador de Persona – Criação de perfis de cliente</h2>
     <p><strong>Descrição:</strong> Ferramenta intuitiva para construir perfis completos de clientes ideais. Ela permite definir características demográficas, hábitos de consumo e dores do público, facilitando a criação de estratégias de marketing mais assertivas.</p>
     <p><strong>Dica prática:</strong> Experimente criar uma persona com base nos seus clientes atuais e valide com pequenas pesquisas para ajustá-la.</p>
-    <a class="button-link" href="https://geradordepersonas.com.br/" target="_blank">Visitar Gerador de Persona</a>
+    <a class="list-button" href="https://geradordepersonas.com.br/" target="_blank">Visitar Gerador de Persona</a>
 </section>
 
 <section>
     <h2>3. Registro.br – Registro oficial de domínios no Brasil</h2>
     <p><strong>Descrição:</strong> Plataforma oficial para registrar e gerenciar domínios “.br”. É o primeiro passo para garantir uma presença digital profissional e confiável, além de proteger o nome da sua marca online.</p>
     <p><strong>Dica prática:</strong> Prefira nomes curtos e fáceis de lembrar. Evite números e traços para facilitar o boca a boca.</p>
-    <a class="button-link" href="https://registro.br/busca-dominio/?fqdn=www.pijamaclub.com.br" target="_blank">Visitar Registro.br</a>
+    <a class="list-button" href="https://registro.br/busca-dominio/?fqdn=www.pijamaclub.com.br" target="_blank">Visitar Registro.br</a>
 </section>
 
 <section>
     <h2>4. Inovação Sebrae (Mapa da Empatia) – Conheça seu público</h2>
     <p><strong>Descrição:</strong> Um recurso valioso para compreender profundamente as necessidades e desejos do cliente. Ele ajuda a visualizar o que o público pensa, sente, vê e ouve, tornando mais fácil alinhar o produto ou serviço às expectativas reais do mercado.</p>
     <p><strong>Dica prática:</strong> Use o mapa para estruturar campanhas de marketing que falem diretamente com a realidade do seu cliente.</p>
-    <a class="button-link" href="https://inovacaosebraeminas.com.br/artigo/conheca-o-mapa-da-empatia" target="_blank">Visitar Mapa da Empatia</a>
+    <a class="list-button" href="https://inovacaosebraeminas.com.br/artigo/conheca-o-mapa-da-empatia" target="_blank">Visitar Mapa da Empatia</a>
 </section>
 
 <section>
     <h2>5. Answer The Public – Descubra o que as pessoas perguntam</h2>
     <p><strong>Descrição:</strong> Ferramenta que revela perguntas e tópicos mais pesquisados na internet. Útil para gerar ideias de conteúdo que atendam às dúvidas e interesses reais do público.</p>
     <p><strong>Dica prática:</strong> Pesquise palavras-chave do seu setor e crie posts de blog ou redes sociais respondendo às questões mais frequentes.</p>
-    <a class="button-link" href="https://answerthepublic.com/" target="_blank">Visitar Answer The Public</a>
+    <a class="list-button" href="https://answerthepublic.com/" target="_blank">Visitar Answer The Public</a>
 </section>
 
 <section>
     <h2>6. Google Trends – Monitoramento de tendências de busca</h2>
     <p><strong>Descrição:</strong> Ferramenta gratuita do Google para acompanhar termos em alta e entender as sazonalidades do mercado. Perfeita para antecipar movimentos do público e ajustar suas estratégias de comunicação.</p>
     <p><strong>Dica prática:</strong> Consulte antes de lançar promoções para aproveitar datas e temas em alta no momento.</p>
-    <a class="button-link" href="https://trends.google.com.br/trends/?geo=BR" target="_blank">Visitar Google Trends</a>
+    <a class="list-button" href="https://trends.google.com.br/trends/?geo=BR" target="_blank">Visitar Google Trends</a>
 </section>
 
 <section>
     <h2>7. Wix – Criação de sites com facilidade</h2>
     <p><strong>Descrição:</strong> Construtor de sites que permite criar páginas profissionais com poucos cliques. Ideal para empreendedores que precisam de uma solução rápida e sem complicações técnicas.</p>
     <p><strong>Dica prática:</strong> Escolha um template que reflita a identidade da sua marca e personalize cores, fontes e imagens para maior impacto.</p>
-    <a class="button-link" href="https://pt.wix.com/" target="_blank">Visitar Wix</a>
+    <a class="list-button" href="https://pt.wix.com/" target="_blank">Visitar Wix</a>
 </section>
 
 <section>
     <h2>8. Tailor Brands – Branding e identidade visual automatizada</h2>
     <p><strong>Descrição:</strong> Plataforma que usa inteligência artificial para criar logos, paletas de cores e kits de identidade visual. Uma maneira ágil de estabelecer uma imagem de marca profissional.</p>
     <p><strong>Dica prática:</strong> Experimente diferentes combinações e escolha aquela que melhor traduz os valores do seu negócio.</p>
-    <a class="button-link" href="https://www.tailorbrands.com/pt-br/lp-brand" target="_blank">Visitar Tailor Brands</a>
+    <a class="list-button" href="https://www.tailorbrands.com/pt-br/lp-brand" target="_blank">Visitar Tailor Brands</a>
 </section>
 
 </body>
