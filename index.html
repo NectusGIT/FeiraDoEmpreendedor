@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Briefing – Ferramentas Digitais</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
@@ -18,121 +19,208 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            border-bottom: 4px solid #007bb8;
-            position: relative;
         }
-        header .mention {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            text-align: right;
-            font-size: 0.9em;
-        }
-        header .mention a {
-            color: #fff;
-            text-decoration: none;
-            display: inline-flex;
+        header .profile {
+            display: flex;
             align-items: center;
-            margin-top: 5px;
-            font-size: 0.9em;
-            background-color: #0077b5;
-            padding: 4px 8px;
+            justify-content: center;
+            flex-direction: column;
+        }
+        header .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        header .profile-name {
+            font-size: 1.6em;
+            font-weight: bold;
+        }
+        header p.tagline {
+            margin-top: 10px;
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+        header .social-follow {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        header .social-follow a {
+            background-color: #fff;
+            color: #009fe3;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        header .social-follow a:hover {
+            background-color: #007bb8;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .highlight-card {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        .highlight-card img {
+            width: 100%;
+            max-width: 500px;
+            object-fit: cover;
+            object-position: 80% center;
+        }
+        .highlight-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .highlight-content h2 {
+            margin-top: 0;
+            color: #009fe3;
+        }
+        .highlight-content p {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+        .highlight-content .button-link,
+        .button-link {
+            background-color: #009fe3;
+            color: #fff;
+            padding: 12px 24px;
             border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            min-width: 200px;
+            text-align: center;
         }
-        header .mention a:hover {
-            background-color: #005983;
+        .highlight-content .button-link:hover,
+        .button-link:hover {
+            background-color: #007bb8;
         }
-        header .mention img {
-            width: 16px;
-            height: 16px;
-            margin-right: 5px;
+        .section-title {
+            margin: 40px 20px 20px;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #009fe3;
+            text-align: center;
+            border-top: 2px solid #009fe3;
+            padding-top: 20px;
         }
         section {
             margin: 20px;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        h1, h2 {
-            margin: 0 0 10px;
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
-        a {
-            color: #00796b;
-            text-decoration: none;
+        section h2 {
+            margin-top: 0;
+            color: #007bb8;
         }
-        a:hover {
-            text-decoration: underline;
+        @media (max-width: 768px) {
+            .highlight-card {
+                flex-direction: column;
+            }
+            .highlight-card img {
+                max-width: 100%;
+                object-position: center center;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Briefing – Ferramentas Digitais</h1>
-    <p>Curadoria para Feira do Empreendedor - Maringá PR</p>
-    <div class="mention">
-        Material por Silviane Curi<br>
-        <a href="https://www.linkedin.com/in/silvianecuri/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">Conectar no LinkedIn
-        </a>
+    <div class="profile">
+        <img src="https://media.licdn.com/dms/image/v2/C4D03AQH1JqCFdgm-iA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1647522938820?e=1757548800&v=beta&t=HzWahgkNB6hggFhHwEU-eNQuGff2kXUf2pzf7RmPTKY" alt="Silviane Curi">
+        <div class="profile-name">Silviane Curi</div>
+        <p class="tagline">Alcance a inovação que seu negócio precisa</p>
+        <div class="social-follow">
+            <a href="https://www.linkedin.com/in/silvianecuri/" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/silvianecuri/" target="_blank">Instagram</a>
+        </div>
     </div>
 </header>
+
+<div class="highlight-card">
+    <img src="https://sebraepr.com.br/wp-content/uploads/2024/04/banner-guia-de-inovacao-1.jpg" alt="Guia de Inovação Sebrae">
+    <div class="highlight-content">
+        <h2>Inove com o Sebrae</h2>
+        <p>Ferramentas práticas e acessíveis para organizar e tirar suas ideias do papel. O Guia de Inovação Sebrae PR ajuda empreendedores a transformar projetos em realidade com estratégia e inovação.</p>
+        <a class="button-link" href="https://sebraepr.com.br/guiadeinovacao/" target="_blank">Quero Inovar com o Sebrae</a>
+    </div>
+</div>
+
+<div class="section-title">Ferramentas Selecionadas para Você</div>
 
 <section>
     <h2>1. Semrush – Pesquisa de palavras-chave e análise de SEO</h2>
     <p><strong>Descrição:</strong> Uma plataforma avançada para monitoramento de concorrência e tendências de busca. Com ela, o empreendedor consegue identificar quais termos e temas estão em alta, descobrir lacunas no mercado e planejar conteúdos estratégicos que atraem mais visitantes para o site.</p>
     <p><strong>Dica prática:</strong> Pesquise palavras-chave relacionadas ao seu negócio e use-as nos textos do seu site e redes sociais para melhorar o ranqueamento no Google.</p>
-    <p><strong>Link:</strong> <a href="https://pt.semrush.com/" target="_blank">https://pt.semrush.com/</a></p>
+    <a class="button-link" href="https://pt.semrush.com/" target="_blank">Visitar Semrush</a>
 </section>
 
 <section>
     <h2>2. Gerador de Persona – Criação de perfis de cliente</h2>
     <p><strong>Descrição:</strong> Ferramenta intuitiva para construir perfis completos de clientes ideais. Ela permite definir características demográficas, hábitos de consumo e dores do público, facilitando a criação de estratégias de marketing mais assertivas.</p>
     <p><strong>Dica prática:</strong> Experimente criar uma persona com base nos seus clientes atuais e valide com pequenas pesquisas para ajustá-la.</p>
-    <p><strong>Link:</strong> <a href="https://geradordepersonas.com.br/" target="_blank">https://geradordepersonas.com.br/</a></p>
+    <a class="button-link" href="https://geradordepersonas.com.br/" target="_blank">Visitar Gerador de Persona</a>
 </section>
 
 <section>
     <h2>3. Registro.br – Registro oficial de domínios no Brasil</h2>
     <p><strong>Descrição:</strong> Plataforma oficial para registrar e gerenciar domínios “.br”. É o primeiro passo para garantir uma presença digital profissional e confiável, além de proteger o nome da sua marca online.</p>
     <p><strong>Dica prática:</strong> Prefira nomes curtos e fáceis de lembrar. Evite números e traços para facilitar o boca a boca.</p>
-    <p><strong>Link:</strong> <a href="https://registro.br/busca-dominio/?fqdn=www.pijamaclub.com.br" target="_blank">https://registro.br/busca-dominio/?fqdn=www.pijamaclub.com.br</a></p>
+    <a class="button-link" href="https://registro.br/busca-dominio/?fqdn=www.pijamaclub.com.br" target="_blank">Visitar Registro.br</a>
 </section>
 
 <section>
-    <h2>4. Inovação Sebrae (Mapa da Empatia) – Ferramenta para conhecer seu público</h2>
+    <h2>4. Inovação Sebrae (Mapa da Empatia) – Conheça seu público</h2>
     <p><strong>Descrição:</strong> Um recurso valioso para compreender profundamente as necessidades e desejos do cliente. Ele ajuda a visualizar o que o público pensa, sente, vê e ouve, tornando mais fácil alinhar o produto ou serviço às expectativas reais do mercado.</p>
     <p><strong>Dica prática:</strong> Use o mapa para estruturar campanhas de marketing que falem diretamente com a realidade do seu cliente.</p>
-    <p><strong>Link:</strong> <a href="https://inovacaosebraeminas.com.br/artigo/conheca-o-mapa-da-empatia" target="_blank">https://inovacaosebraeminas.com.br/artigo/conheca-o-mapa-da-empatia</a></p>
+    <a class="button-link" href="https://inovacaosebraeminas.com.br/artigo/conheca-o-mapa-da-empatia" target="_blank">Visitar Mapa da Empatia</a>
 </section>
 
 <section>
     <h2>5. Answer The Public – Descubra o que as pessoas perguntam</h2>
     <p><strong>Descrição:</strong> Ferramenta que revela perguntas e tópicos mais pesquisados na internet. Útil para gerar ideias de conteúdo que atendam às dúvidas e interesses reais do público.</p>
     <p><strong>Dica prática:</strong> Pesquise palavras-chave do seu setor e crie posts de blog ou redes sociais respondendo às questões mais frequentes.</p>
-    <p><strong>Link:</strong> <a href="https://answerthepublic.com/" target="_blank">https://answerthepublic.com/</a></p>
+    <a class="button-link" href="https://answerthepublic.com/" target="_blank">Visitar Answer The Public</a>
 </section>
 
 <section>
     <h2>6. Google Trends – Monitoramento de tendências de busca</h2>
     <p><strong>Descrição:</strong> Ferramenta gratuita do Google para acompanhar termos em alta e entender as sazonalidades do mercado. Perfeita para antecipar movimentos do público e ajustar suas estratégias de comunicação.</p>
     <p><strong>Dica prática:</strong> Consulte antes de lançar promoções para aproveitar datas e temas em alta no momento.</p>
-    <p><strong>Links:</strong> <a href="https://trends.google.com.br/trends/?geo=BR" target="_blank">https://trends.google.com.br/trends/?geo=BR</a> | <a href="https://trends.google.com/tv/" target="_blank">https://trends.google.com/tv/</a></p>
+    <a class="button-link" href="https://trends.google.com.br/trends/?geo=BR" target="_blank">Visitar Google Trends</a>
 </section>
 
 <section>
     <h2>7. Wix – Criação de sites com facilidade</h2>
     <p><strong>Descrição:</strong> Construtor de sites que permite criar páginas profissionais com poucos cliques. Ideal para empreendedores que precisam de uma solução rápida e sem complicações técnicas.</p>
     <p><strong>Dica prática:</strong> Escolha um template que reflita a identidade da sua marca e personalize cores, fontes e imagens para maior impacto.</p>
-    <p><strong>Link:</strong> <a href="https://pt.wix.com/" target="_blank">https://pt.wix.com/</a></p>
+    <a class="button-link" href="https://pt.wix.com/" target="_blank">Visitar Wix</a>
 </section>
 
 <section>
     <h2>8. Tailor Brands – Branding e identidade visual automatizada</h2>
     <p><strong>Descrição:</strong> Plataforma que usa inteligência artificial para criar logos, paletas de cores e kits de identidade visual. Uma maneira ágil de estabelecer uma imagem de marca profissional.</p>
     <p><strong>Dica prática:</strong> Experimente diferentes combinações e escolha aquela que melhor traduz os valores do seu negócio.</p>
-    <p><strong>Link:</strong> <a href="https://www.tailorbrands.com/pt-br/lp-brand" target="_blank">https://www.tailorbrands.com/pt-br/lp-brand</a></p>
+    <a class="button-link" href="https://www.tailorbrands.com/pt-br/lp-brand" target="_blank">Visitar Tailor Brands</a>
 </section>
 
 </body>
